@@ -18,9 +18,13 @@ struct ContentView: View {
             }
             Text(dateViewModel.lastSavedDate)
             
-            
             Button("Load saved date") {
                 dateViewModel.loadSavedDate()
+            }
+            Text(dateViewModel.lastSavedDate)
+            
+            Button("Delete saved date") {
+                dateViewModel.clearSavedDate()
             }
             Text(dateViewModel.lastSavedDate)
             

@@ -13,10 +13,10 @@ class DateViewModel: ObservableObject {
     func saveCurrentDate() {
         let currentDate = Date()
         UserDefaults.standard.set(currentDate, forKey: "savedDate")
-        updateDateDisplay(currentDate)
+        formatDateDisplay(currentDate)
     }
     
-    func updateDateDisplay(_ date: Date) {
+    func formatDateDisplay(_ date: Date) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .medium
@@ -25,10 +25,15 @@ class DateViewModel: ObservableObject {
     
     func loadSavedDate() {
         if let savedDate = UserDefaults.standard.object(forKey: "savedDate") as? Date {
-            updateDateDisplay(savedDate)
+            formatDateDisplay(savedDate)
         }
         else {
-            lastSavedDate = "No date saved yet"
+            lastSavedDate = "No date saved"
         }
+    }
+    
+    func clearSavedDate() {
+        UserDefaults.standard.removeObject(forKey: "savedDate")
+        lastSavedDate = "Date removed"
     }
 }
