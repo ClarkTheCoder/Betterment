@@ -28,6 +28,10 @@ struct ContentView: View {
             .background(Color.blue)
             .foregroundColor(.white)
             .cornerRadius(8)
+            
+            Text("'The difference between someone who failed and who succeeds is the person who succeeded failed but tried one more time'")
+                .italic()
+                .padding()
         }
         .padding()
         .onAppear {
