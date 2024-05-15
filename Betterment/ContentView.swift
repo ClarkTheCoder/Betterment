@@ -5,36 +5,33 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            // Display the formatted last saved date
-            Text(dateViewModel.lastSavedDateFormatted)
-                .padding()
-                .frame(maxWidth: .infinity, alignment: .center)
-                .background(Color.gray.opacity(0.2))
-                .cornerRadius(8)
+            // Display the elapsed time
+            if let elapsedTime = dateViewModel.timeElapsedDisplay {
+                Text(elapsedTime)
+                    .padding()
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .background(Color.gray.opacity(0.2))
+                    .cornerRadius(8)
+            } else {
+                Text("No elapsed time available.")
+                    .padding()
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .background(Color.gray.opacity(0.2))
+                    .cornerRadius(8)
+            }
             
             // Button to save the current date
-            Button("Save Current Date") {
+            Button("Begin Journey") {
                 dateViewModel.saveCurrentDate()
             }
             .padding()
             .background(Color.blue)
             .foregroundColor(.white)
             .cornerRadius(8)
-
-            // Button to show the elapsed time since the last saved date
-            Button("Show Time Since Last Saved Date") {
-                // This button's action will trigger an update in the ViewModel that's shown on the UI
-                let elapsed = dateViewModel.timeSinceLastSavedDate()
-                dateViewModel.lastSavedDateFormatted = elapsed
-            }
-            .padding()
-            .background(Color.green)
-            .foregroundColor(.white)
-            .cornerRadius(8)
         }
         .padding()
         .onAppear {
-            dateViewModel.loadSavedDate()  // Load the last saved date when the view appears
+            dateViewModel.loadSavedDate()
         }
     }
 }

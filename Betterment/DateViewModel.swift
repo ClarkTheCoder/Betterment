@@ -3,6 +3,7 @@ import Foundation
 class DateViewModel: ObservableObject {
     @Published var lastSavedDateFormatted: String = ""
     @Published var lastSavedDate: Date?  // Store the actual Date object
+    @Published var timeElapsedDisplay: String?
 
     func saveCurrentDate() {
         let currentDate = Date()
@@ -21,26 +22,29 @@ class DateViewModel: ObservableObject {
     func loadSavedDate() {
         if let savedDate = UserDefaults.standard.object(forKey: "savedDate") as? Date {
             lastSavedDate = savedDate  // Load the Date object
+            timeSinceLastSavedDate()
             formatDateDisplay(savedDate)
         } else {
-            lastSavedDateFormatted = "No date saved"
+            timeElapsedDisplay = "Nada"
         }
     }
     
     func clearSavedDate() {
         UserDefaults.standard.removeObject(forKey: "savedDate")
         lastSavedDate = nil  // Clear the Date object
-        lastSavedDateFormatted = "Date removed"
+        timeElapsedDisplay = "0"
     }
     
     // New Method: Calculate the time elapsed since the last saved date
     func timeSinceLastSavedDate() -> String {
-        guard let lastDate = lastSavedDate else {
-            return "No date was saved previously."
-        }
-        let elapsedTime = Date().timeIntervalSince(lastDate)
-        return formatTimeInterval(elapsedTime)
-    }
+           guard let lastDate = lastSavedDate else {
+               timeElapsedDisplay = "No date was saved previously."
+               return timeElapsedDisplay!
+           }
+           let elapsedTime = Date().timeIntervalSince(lastDate)
+           timeElapsedDisplay = formatTimeInterval(elapsedTime)
+           return timeElapsedDisplay!
+       }
     
     private func formatTimeInterval(_ interval: TimeInterval) -> String {
         let formatter = DateComponentsFormatter()
