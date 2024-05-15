@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    
 
     @ObservedObject var dateViewModel = DateViewModel()
     
@@ -17,8 +16,15 @@ struct ContentView: View {
             Button("Better myself.") {
                 dateViewModel.saveCurrentDate()
             }
-            
             Text(dateViewModel.lastSavedDate)
+            
+            
+            Button("Load saved date") {
+                dateViewModel.loadSavedDate()
+            }
+            Text(dateViewModel.lastSavedDate)
+            
+        
         }
         .padding()
     }
