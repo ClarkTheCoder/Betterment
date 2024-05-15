@@ -9,9 +9,9 @@ struct ContentView: View {
             if let elapsedTime = dateViewModel.timeElapsedDisplay {
                 Text(elapsedTime)
                     .padding()
-                    .frame(maxWidth: .infinity, alignment: .center)
+                    .frame(width: 200, height: 200, alignment: .center)
                     .background(Color.gray.opacity(0.2))
-                    .cornerRadius(8)
+                    .clipShape(Circle())
             } else {
                 Text("No elapsed time available.")
                     .padding()
