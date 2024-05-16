@@ -25,7 +25,7 @@ class DateViewModel: ObservableObject {
             timeSinceLastSavedDate()
             formatDateDisplay(savedDate)
         } else {
-            timeElapsedDisplay = "Nada"
+            timeElapsedDisplay = "Start your story"
         }
     }
     

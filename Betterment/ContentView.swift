@@ -6,12 +6,16 @@ struct ContentView: View {
     var body: some View {
         VStack {
             // Display the elapsed time
+            Spacer()
             if let elapsedTime = dateViewModel.timeElapsedDisplay {
                 Text(elapsedTime)
                     .padding()
-                    .frame(width: 200, height: 200, alignment: .center)
-                    .background(Color.gray.opacity(0.2))
-                    .clipShape(Circle())
+                    .frame(width: 300, height: 300, alignment: .center)
+                    .background(Color.clear)
+                    .overlay(
+                        Circle()
+                            .stroke(Color.black.opacity(0.2), lineWidth: 2)
+                        )
             } else {
                 Text("No elapsed time available.")
                     .padding()
@@ -19,7 +23,7 @@ struct ContentView: View {
                     .background(Color.gray.opacity(0.2))
                     .cornerRadius(8)
             }
-            
+            Spacer()
             // Button to save the current date
             Button("Begin Journey") {
                 dateViewModel.saveCurrentDate()
