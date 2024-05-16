@@ -30,7 +30,6 @@ struct ContentView: View {
             // Button to save the current date
             Button("Begin Journey") {
                 dateViewModel.saveCurrentDate()
-                dateViewModel.loadSavedDate()
             }
             .padding()
             .background(Color.black)
