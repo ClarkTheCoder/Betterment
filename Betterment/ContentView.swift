@@ -36,9 +36,10 @@ struct ContentView: View {
             .foregroundColor(.white)
             .cornerRadius(8)
             
-            Text("'The difference between someone who failed and who succeeds is the person who succeeded failed but tried one more time'")
+            Text("'The difference between someone who fails and someone who succeeds is that the one who succeeds tries one more time.")
                 .italic()
                 .padding()
+                .foregroundStyle(Color(Color.gray))
         }
         .padding()
         .onAppear {
