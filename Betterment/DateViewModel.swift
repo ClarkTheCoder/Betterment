@@ -22,7 +22,7 @@ class DateViewModel: ObservableObject {
     func loadSavedDate() {
         if let savedDate = UserDefaults.standard.object(forKey: "savedDate") as? Date {
             lastSavedDate = savedDate  // Load the Date object
-            timeSinceLastSavedDate()
+            timeElapsed()
             formatDateDisplay(savedDate)
         } else {
             timeElapsedDisplay = "Start your story"
@@ -35,21 +35,21 @@ class DateViewModel: ObservableObject {
         timeElapsedDisplay = "0"
     }
     
-    // New Method: Calculate the time elapsed since the last saved date
-    func timeSinceLastSavedDate() -> String {
-           guard let lastDate = lastSavedDate else {
-               timeElapsedDisplay = "No date was saved previously."
-               return timeElapsedDisplay!
-           }
-           let elapsedTime = Date().timeIntervalSince(lastDate)
-           timeElapsedDisplay = formatTimeInterval(elapsedTime)
-           return timeElapsedDisplay!
-       }
+    // returns time elapsed
+    func timeElapsed() -> String {
+        guard let lastDate = lastSavedDate else {
+            timeElapsedDisplay = "No date was saved previously."
+            return timeElapsedDisplay!
+        }
+        let elapsedTime = Date().timeIntervalSince(lastDate)
+        timeElapsedDisplay = formatTimeInterval(elapsedTime)
+        return timeElapsedDisplay ?? "Error in formatting time"
+    }
     
     private func formatTimeInterval(_ interval: TimeInterval) -> String {
         let formatter = DateComponentsFormatter()
         formatter.unitsStyle = .full
-        formatter.allowedUnits = [.year, .month, .weekOfMonth, .day, .hour, .minute, .second]
+        formatter.allowedUnits = [.year, .month, .weekOfMonth, .day, .hour, .minute]
         return formatter.string(from: interval) ?? "Error calculating time"
     }
 }
