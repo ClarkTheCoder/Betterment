@@ -10,6 +10,7 @@ class DateViewModel: ObservableObject {
         UserDefaults.standard.set(currentDate, forKey: "savedDate")
         lastSavedDate = currentDate  // Save the Date object
         formatDateDisplay(currentDate)
+        updateElapsedTime()
     }
     
     func formatDateDisplay(_ date: Date) {
@@ -22,7 +23,7 @@ class DateViewModel: ObservableObject {
     func loadSavedDate() {
         if let savedDate = UserDefaults.standard.object(forKey: "savedDate") as? Date {
             lastSavedDate = savedDate  // Load the Date object
-            timeElapsed()
+            updateElapsedTime()
             formatDateDisplay(savedDate)
         } else {
             timeElapsedDisplay = "Start your story"
@@ -35,16 +36,14 @@ class DateViewModel: ObservableObject {
         timeElapsedDisplay = "0"
     }
     
-    // returns time elapsed
-    func timeElapsed() -> String {
-        guard let lastDate = lastSavedDate else {
-            timeElapsedDisplay = "No date was saved previously."
-            return timeElapsedDisplay!
+    func updateElapsedTime() {
+            guard let lastDate = lastSavedDate else {
+                timeElapsedDisplay = "No date was saved previously."
+                return
+            }
+            let elapsedTime = Date().timeIntervalSince(lastDate)
+            timeElapsedDisplay = formatTimeInterval(elapsedTime)
         }
-        let elapsedTime = Date().timeIntervalSince(lastDate)
-        timeElapsedDisplay = formatTimeInterval(elapsedTime)
-        return timeElapsedDisplay ?? "Error in formatting time"
-    }
     
     private func formatTimeInterval(_ interval: TimeInterval) -> String {
         let formatter = DateComponentsFormatter()

@@ -30,13 +30,14 @@ struct ContentView: View {
             // Button to save the current date
             Button("Begin Journey") {
                 dateViewModel.saveCurrentDate()
+                dateViewModel.loadSavedDate()
             }
             .padding()
             .background(Color.black)
             .foregroundColor(.white)
             .cornerRadius(8)
             
-            Text("'The difference between someone who fails and someone who succeeds is that the one who succeeds tries one more time.")
+            Text("'The difference between someone who fails and someone who succeeds is that the one who succeeds tries one more time.'")
                 .italic()
                 .padding()
                 .foregroundStyle(Color(Color.gray))
