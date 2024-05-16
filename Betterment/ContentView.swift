@@ -10,7 +10,7 @@ struct ContentView: View {
             if let elapsedTime = dateViewModel.timeElapsedDisplay {
                 Text(elapsedTime)
                     .padding()
-                    .frame(width: 300, height: 300, alignment: .center)
+                    .frame(width: 270, height: 270, alignment: .center)
                     .background(Color.clear)
                     .overlay(
                         Circle()
@@ -20,8 +20,11 @@ struct ContentView: View {
                 Text("No elapsed time available.")
                     .padding()
                     .frame(maxWidth: .infinity, alignment: .center)
-                    .background(Color.gray.opacity(0.2))
-                    .cornerRadius(8)
+                    .background(Color.clear)
+                    .overlay(
+                        Circle()
+                            .stroke(Color.black.opacity(0.2), lineWidth: 2)
+                        )
             }
             Spacer()
             // Button to save the current date
@@ -29,7 +32,7 @@ struct ContentView: View {
                 dateViewModel.saveCurrentDate()
             }
             .padding()
-            .background(Color.blue)
+            .background(Color.black)
             .foregroundColor(.white)
             .cornerRadius(8)
             
