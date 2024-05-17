@@ -17,15 +17,16 @@ struct ContentView: View {
             if let elapsedTime = dateViewModel.timeElapsedDisplay {
                 Text(elapsedTime)
                     .padding()
-                    .frame(width: 270, height: 270, alignment: .center)
+                    .frame(width: 280, height: 280, alignment: .center)
                     .background(Color.clear)
+                    .font(.largeTitle)
                     .overlay(
                         Circle()
                             .stroke(Theme.primary, lineWidth: 2)
                         )
                     .foregroundColor(Theme.primary)
             } else {
-                Text("No elapsed time available.")
+                Text("no elapsed time available.")
                     .padding()
                     .frame(maxWidth: .infinity, alignment: .center)
                     .background(Color.clear)
@@ -36,18 +37,24 @@ struct ContentView: View {
             }
             Spacer()
             // Button to save the current date
-            Button("Begin Journey") {
+            Button(action: {
                 dateViewModel.saveCurrentDate()
+            }) {
+                Text("Begin Journey")
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(colorScheme == .dark ? Color.white : Theme.primary)
+                    .foregroundColor(colorScheme == .dark ? Color.black : Color.white)
+                    .cornerRadius(12)
             }
-            .padding()
-            .background(colorScheme == .dark ? Color.white : Theme.primary)
-            .foregroundColor(colorScheme == .dark ? Color.black : Color.white)
-            .cornerRadius(12)
+            .frame(minWidth: 200)
             
             Text(quoteEngine.displayQuote())
                 .italic()
                 .padding()
-                .foregroundStyle(Color(Color.gray))
+                .foregroundStyle(colorScheme == .dark ? Color.gray : Color.black)
+            Spacer()
+            
         }
         .padding()
         .onAppear {

@@ -48,7 +48,7 @@ class DateViewModel: ObservableObject {
     private func formatTimeInterval(_ interval: TimeInterval) -> String {
         let formatter = DateComponentsFormatter()
         formatter.unitsStyle = .full
-        formatter.allowedUnits = [.year, .month, .weekOfMonth, .day, .hour, .minute]
+        formatter.allowedUnits = [.year, .month, .weekOfMonth, .day]
         return formatter.string(from: interval) ?? "Error calculating time"
     }
 }
