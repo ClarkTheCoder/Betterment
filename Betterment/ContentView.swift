@@ -22,7 +22,7 @@ struct ContentView: View {
                     .font(.largeTitle)
                     .overlay(
                         Circle()
-                            .stroke(Theme.primary, lineWidth: 2)
+                            .stroke(Theme.primary, lineWidth: 4)
                         )
                     .foregroundColor(Theme.primary)
             } else {
@@ -32,22 +32,21 @@ struct ContentView: View {
                     .background(Color.clear)
                     .overlay(
                         Circle()
-                            .stroke(Theme.primary, lineWidth: 2)
+                            .stroke(Theme.primary, lineWidth: 4)
                         )
             }
             Spacer()
-            // Button to save the current date
+         
             Button(action: {
                 dateViewModel.saveCurrentDate()
             }) {
-                Text("Begin Journey")
+                Text("begin")
                     .frame(maxWidth: .infinity)
                     .padding()
                     .background(colorScheme == .dark ? Color.white : Theme.primary)
                     .foregroundColor(colorScheme == .dark ? Color.black : Color.white)
                     .cornerRadius(12)
             }
-            .frame(minWidth: 200)
             
             Text(quoteEngine.displayQuote())
                 .italic()
