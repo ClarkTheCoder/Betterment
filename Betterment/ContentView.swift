@@ -1,7 +1,13 @@
 import SwiftUI
 
+enum Theme {
+    static let primary = Color("Primary")
+    
+}
+
 struct ContentView: View {
     @ObservedObject var dateViewModel = DateViewModel()
+    @Environment(\.colorScheme) var colorScheme
 
     var body: some View {
         VStack {
@@ -14,8 +20,9 @@ struct ContentView: View {
                     .background(Color.clear)
                     .overlay(
                         Circle()
-                            .stroke(Color.black.opacity(0.2), lineWidth: 2)
+                            .stroke(Theme.primary, lineWidth: 2)
                         )
+                    .foregroundColor(Theme.primary)
             } else {
                 Text("No elapsed time available.")
                     .padding()
@@ -23,7 +30,7 @@ struct ContentView: View {
                     .background(Color.clear)
                     .overlay(
                         Circle()
-                            .stroke(Color.black.opacity(0.2), lineWidth: 2)
+                            .stroke(Theme.primary, lineWidth: 2)
                         )
             }
             Spacer()
@@ -32,9 +39,9 @@ struct ContentView: View {
                 dateViewModel.saveCurrentDate()
             }
             .padding()
-            .background(Color.black)
-            .foregroundColor(.white)
-            .cornerRadius(8)
+            .background(colorScheme == .dark ? Color.white : Theme.primary)
+            .foregroundColor(colorScheme == .dark ? Color.black : Color.white)
+            .cornerRadius(12)
             
             Text("'The difference between someone who fails and someone who succeeds is that the one who succeeds tries one more time.'")
                 .italic()
@@ -50,6 +57,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
+        ContentView()
         ContentView()
     }
 }
