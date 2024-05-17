@@ -12,6 +12,7 @@
 		67219E562BF2CFA700A3968A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67219E552BF2CFA700A3968A /* Assets.xcassets */; };
 		67219E592BF2CFA700A3968A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67219E582BF2CFA700A3968A /* Preview Assets.xcassets */; };
 		67219E622BF2CFE600A3968A /* DateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67219E612BF2CFE600A3968A /* DateViewModel.swift */; };
+		6754F2B32BF8163800CAFAF1 /* QuoteEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6754F2B22BF8163800CAFAF1 /* QuoteEngine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		67219E552BF2CFA700A3968A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67219E582BF2CFA700A3968A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		67219E612BF2CFE600A3968A /* DateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewModel.swift; sourceTree = "<group>"; };
+		6754F2B22BF8163800CAFAF1 /* QuoteEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteEngine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				67219E612BF2CFE600A3968A /* DateViewModel.swift */,
 				67219E552BF2CFA700A3968A /* Assets.xcassets */,
 				67219E572BF2CFA700A3968A /* Preview Content */,
+				6754F2B22BF8163800CAFAF1 /* QuoteEngine.swift */,
 			);
 			path = Betterment;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6754F2B32BF8163800CAFAF1 /* QuoteEngine.swift in Sources */,
 				67219E622BF2CFE600A3968A /* DateViewModel.swift in Sources */,
 				67219E542BF2CFA600A3968A /* ContentView.swift in Sources */,
 				67219E522BF2CFA600A3968A /* BettermentApp.swift in Sources */,

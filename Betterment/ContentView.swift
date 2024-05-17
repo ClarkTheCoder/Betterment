@@ -8,6 +8,7 @@ enum Theme {
 struct ContentView: View {
     @ObservedObject var dateViewModel = DateViewModel()
     @Environment(\.colorScheme) var colorScheme
+    var quoteEngine = QuoteEngine();
 
     var body: some View {
         VStack {
@@ -43,7 +44,7 @@ struct ContentView: View {
             .foregroundColor(colorScheme == .dark ? Color.black : Color.white)
             .cornerRadius(12)
             
-            Text("'The difference between someone who fails and someone who succeeds is that the one who succeeds tries one more time.'")
+            Text(quoteEngine.displayQuote())
                 .italic()
                 .padding()
                 .foregroundStyle(Color(Color.gray))
