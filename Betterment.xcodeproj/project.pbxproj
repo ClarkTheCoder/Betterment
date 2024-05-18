@@ -24,8 +24,8 @@
 		67219E582BF2CFA700A3968A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		67219E612BF2CFE600A3968A /* DateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewModel.swift; sourceTree = "<group>"; };
 		6754F2B22BF8163800CAFAF1 /* QuoteEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteEngine.swift; sourceTree = "<group>"; };
-		6781B5282BF8449E0038CE4C /* Betterment.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Betterment.entitlements; sourceTree = "<group>"; };
 		6781B52D2BF854EE0038CE4C /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		6781B52F2BF859150038CE4C /* Betterment.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Betterment.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +58,7 @@
 		67219E502BF2CFA600A3968A /* Betterment */ = {
 			isa = PBXGroup;
 			children = (
-				6781B5282BF8449E0038CE4C /* Betterment.entitlements */,
+				6781B52F2BF859150038CE4C /* Betterment.entitlements */,
 				67219E512BF2CFA600A3968A /* BettermentApp.swift */,
 				67219E532BF2CFA600A3968A /* ContentView.swift */,
 				67219E612BF2CFE600A3968A /* DateViewModel.swift */,

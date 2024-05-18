@@ -13,10 +13,12 @@ struct SideMenuView: View {
             NavigationLink(destination: Text("Home")) {
                 Text("Home")
                     .padding()
+                    .foregroundColor(Theme.primary)
             }
             NavigationLink(destination: Text("Settings")) {
                 Text("Settings")
                     .padding()
+                    .foregroundColor(Theme.primary)
             }
             Spacer()
         }

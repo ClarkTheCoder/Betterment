@@ -78,8 +78,9 @@ struct ContentView: View {
             }) {
                 Image(systemName: "line.horizontal.3")
                     .imageScale(.large)
+                    .tint(Theme.primary)
             })
-            .navigationBarTitle("Main View", displayMode: .inline)
+            .navigationBarTitle("Betterment", displayMode: .inline)
         }
     }
 }
