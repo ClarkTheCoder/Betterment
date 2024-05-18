@@ -13,7 +13,7 @@
 		67219E592BF2CFA700A3968A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67219E582BF2CFA700A3968A /* Preview Assets.xcassets */; };
 		67219E622BF2CFE600A3968A /* DateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67219E612BF2CFE600A3968A /* DateViewModel.swift */; };
 		6754F2B32BF8163800CAFAF1 /* QuoteEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6754F2B22BF8163800CAFAF1 /* QuoteEngine.swift */; };
-		6781B5272BF843910038CE4C /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6781B5262BF843910038CE4C /* SignIn.swift */; };
+		6781B52E2BF854EE0038CE4C /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6781B52D2BF854EE0038CE4C /* SideMenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +24,8 @@
 		67219E582BF2CFA700A3968A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		67219E612BF2CFE600A3968A /* DateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewModel.swift; sourceTree = "<group>"; };
 		6754F2B22BF8163800CAFAF1 /* QuoteEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteEngine.swift; sourceTree = "<group>"; };
-		6781B5262BF843910038CE4C /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		6781B5282BF8449E0038CE4C /* Betterment.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Betterment.entitlements; sourceTree = "<group>"; };
+		6781B52D2BF854EE0038CE4C /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,7 @@
 				67219E552BF2CFA700A3968A /* Assets.xcassets */,
 				67219E572BF2CFA700A3968A /* Preview Content */,
 				6754F2B22BF8163800CAFAF1 /* QuoteEngine.swift */,
-				6781B5262BF843910038CE4C /* SignIn.swift */,
+				6781B52D2BF854EE0038CE4C /* SideMenuView.swift */,
 			);
 			path = Betterment;
 			sourceTree = "<group>";
@@ -150,7 +150,7 @@
 			files = (
 				6754F2B32BF8163800CAFAF1 /* QuoteEngine.swift in Sources */,
 				67219E622BF2CFE600A3968A /* DateViewModel.swift in Sources */,
-				6781B5272BF843910038CE4C /* SignIn.swift in Sources */,
+				6781B52E2BF854EE0038CE4C /* SideMenuView.swift in Sources */,
 				67219E542BF2CFA600A3968A /* ContentView.swift in Sources */,
 				67219E522BF2CFA600A3968A /* BettermentApp.swift in Sources */,
 			);
