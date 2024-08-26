@@ -10,13 +10,18 @@ struct SideMenuView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Spacer()
-            NavigationLink(destination: AboutView()) {
-                Text("About")
+            NavigationLink(destination: Text("Profile")) {
+                Text("Profile")
                     .padding()
                     .foregroundColor(Theme.primary)
             }
             NavigationLink(destination: Text("FAQ")) {
                 Text("Settings")
+                    .padding()
+                    .foregroundColor(Theme.primary)
+            }
+            NavigationLink(destination: AboutView()) {
+                Text("About")
                     .padding()
                     .foregroundColor(Theme.primary)
             }

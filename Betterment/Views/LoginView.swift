@@ -17,25 +17,49 @@ struct LoginView: View {
                 .ignoresSafeArea()
          
             RoundedRectangle(cornerRadius: 30, style: .continuous)
-                .foregroundStyle(Color.white)
+                .foregroundStyle(Color.pink)
                 .frame(width: 1000, height: 400)
-                .rotationEffect(.degrees(135))
+                .rotationEffect(.degrees(125))
                 .offset(y: -350)
             
-            VStack(spacing: 20){
-                Text("Welcome")
-                    .foregroundStyle(Color.black)
+            VStack(){
+                Text("Welcome.")
+                    .foregroundColor(.white)
                     .bold()
                     .font(.largeTitle)
                     .offset(x: -100, y: -100)
                 
                 TextField("Email", text: $email)
                     .foregroundStyle(Color.white)
-                    .textFieldStyle(.plain)
+                    .frame(width: 350)
+                    .bold()
+                    .padding(.bottom, 5)
+                
+                SecureField("Password", text: $password)
+                    .foregroundStyle(Color.white)
+                    .frame(width: 350)
+                    .bold()
+           
+                Button(action: {}, label: {
+                    Text("Sign up")
+                        .bold()
+                        .frame(width: 200, height: 40)
+                        .background(Color.white).opacity(0.9)
+                        .foregroundStyle(Color.black)
+                        .padding(.top, 200)
+                })
+                
+                Button(action: {}, label: {
+                    Text("Already have an account?")
+                        .bold()
+                        .foregroundStyle(Color.white)
+                        .offset(y: 10)
+                })
             }
         }
     }
 }
+
 
 #Preview {
     LoginView()
