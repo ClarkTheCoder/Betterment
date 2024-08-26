@@ -6,10 +6,14 @@
 //
 
 import SwiftUI
-import FirebaseAuth
+import FirebaseCore
 
 @main
 struct BettermentApp: App {
+    
+    init() {
+        FirebaseApp.configure()
+    }
     
     var body: some Scene {
         WindowGroup {
