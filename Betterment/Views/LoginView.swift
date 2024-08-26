@@ -11,7 +11,11 @@ struct LoginView: View {
     var body: some View {
         ZStack {
             Color.black
+            RoundedRectangle(cornerRadius: 30, style: .continuous)
+                .foregroundStyle(Color.white)
+                .frame(width: 1000, height: 400)
         }
+        .ignoresSafeArea()
     }
 }
 
