@@ -21,13 +21,14 @@ struct LoginView: View {
                 .frame(width: 1000, height: 400)
                 .rotationEffect(.degrees(125))
                 .offset(y: -350)
-            
+        
             VStack(){
+                Spacer()
                 Text("Welcome.")
                     .foregroundColor(.white)
                     .bold()
                     .font(.largeTitle)
-                    .offset(x: -100, y: -100)
+                    .offset(x: -100)
                 
                 TextField("Email", text: $email)
                     .foregroundStyle(Color.white)
@@ -39,21 +40,19 @@ struct LoginView: View {
                     .foregroundStyle(Color.white)
                     .frame(width: 350)
                     .bold()
-           
+                Spacer()
                 Button(action: {}, label: {
                     Text("Sign up")
                         .bold()
                         .frame(width: 200, height: 40)
                         .background(Color.white).opacity(0.9)
                         .foregroundStyle(Color.black)
-                        .padding(.top, 200)
                 })
                 
                 Button(action: {}, label: {
                     Text("Already have an account?")
                         .bold()
                         .foregroundStyle(Color.white)
-                        .offset(y: 10)
                 })
             }
         }

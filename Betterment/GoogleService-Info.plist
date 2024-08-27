@@ -9,21 +9,21 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>dev.carsonclark.Betterment</string>
+	<string>dev.carsonlark.Betterment</string>
 	<key>PROJECT_ID</key>
 	<string>tappo-a1575</string>
 	<key>STORAGE_BUCKET</key>
 	<string>tappo-a1575.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:992122530487:ios:59fb94b7e665c4a303fb32</string>
 </dict>

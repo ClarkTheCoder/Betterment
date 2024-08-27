@@ -23,7 +23,7 @@
 		67F86BDF2C7CDF6600964AEB /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 67F86BDE2C7CDF6600964AEB /* FirebaseStorageCombine-Community */; };
 		67F86BE12C7CDF8100964AEB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F86BE02C7CDF8100964AEB /* LoginView.swift */; };
 		67F86BE32C7CE07900964AEB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F86BE22C7CE07900964AEB /* HomeView.swift */; };
-		67FCD49B2C7D252200975DE8 /* GoogleService-Info 2.03.18 PM.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67FCD49A2C7D252200975DE8 /* GoogleService-Info 2.03.18 PM.plist */; };
+		67FCD49B2C7D252200975DE8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 67FCD49A2C7D252200975DE8 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +39,7 @@
 		67D134762BFAF7F6009C5096 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		67F86BE02C7CDF8100964AEB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		67F86BE22C7CE07900964AEB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		67FCD49A2C7D252200975DE8 /* GoogleService-Info 2.03.18 PM.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info 2.03.18 PM.plist"; sourceTree = "<group>"; };
+		67FCD49A2C7D252200975DE8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +78,7 @@
 		67219E502BF2CFA600A3968A /* Betterment */ = {
 			isa = PBXGroup;
 			children = (
-				67FCD49A2C7D252200975DE8 /* GoogleService-Info 2.03.18 PM.plist */,
+				67FCD49A2C7D252200975DE8 /* GoogleService-Info.plist */,
 				67F86BD22C7CDF0E00964AEB /* Other */,
 				6781B52F2BF859150038CE4C /* Betterment.entitlements */,
 				67F86BD12C7CDEDF00964AEB /* Views */,
@@ -187,7 +187,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67FCD49B2C7D252200975DE8 /* GoogleService-Info 2.03.18 PM.plist in Resources */,
+				67FCD49B2C7D252200975DE8 /* GoogleService-Info.plist in Resources */,
 				67219E592BF2CFA700A3968A /* Preview Assets.xcassets in Resources */,
 				67219E562BF2CFA700A3968A /* Assets.xcassets in Resources */,
 			);
