@@ -6,8 +6,14 @@ enum Theme {
 }
 
 struct ContentView: View {
+    @State private var userIsLoggedIn = false
+    
     var body: some View {
-        LoginView()
+        if userIsLoggedIn {
+            HomeView()
+        } else {
+            LoginView(userIsLoggedIn: $userIsLoggedIn)
+        }
     }
 }
 
