@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
+    @State private var userIsLoggedIn = false
     
     var body: some View {
         ZStack {
@@ -28,7 +30,7 @@ struct LoginView: View {
                     .foregroundColor(.white)
                     .bold()
                     .font(.largeTitle)
-                    .offset(x: -100)
+                    .offset(x: -100, y: -10)
                 
                 TextField("Email", text: $email)
                     .foregroundStyle(Color.white)
@@ -41,7 +43,7 @@ struct LoginView: View {
                     .frame(width: 350)
                     .bold()
                 Spacer()
-                Button(action: {}, label: {
+                Button(action: {register()}, label: {
                     Text("Sign up")
                         .bold()
                         .frame(width: 200, height: 40)
@@ -49,15 +51,40 @@ struct LoginView: View {
                         .foregroundStyle(Color.black)
                 })
                 
-                Button(action: {}, label: {
+                Button(action: {login()}, label: {
                     Text("Already have an account?")
                         .bold()
                         .foregroundStyle(Color.white)
                 })
             }
         }
+        .onAppear(){
+            Auth.auth().addStateDidChangeListener {auth, user in
+                // if users logged in
+                if user != nil {
+                    userIsLoggedIn = true
+                }
+            }
+        }
+    }
+    
+    func register() {
+        Auth.auth().createUser(withEmail: email, password: password) { result, error in
+            if error != nil {
+                print(error?.localizedDescription)
+            }
+        }
+    }
+    
+    func login() {
+        Auth.auth().signIn(withEmail: email, password: password) {result, error in
+            if error != nil {
+                print(error?.localizedDescription)
+            }
+        }
     }
 }
+
 
 
 #Preview {

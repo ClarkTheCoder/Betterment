@@ -1,4 +1,5 @@
 import SwiftUI
+import FirebaseAuth
 
 enum Theme {
     static let primary = Color("Primary")
